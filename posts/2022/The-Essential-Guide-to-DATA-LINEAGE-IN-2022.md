@@ -1,9 +1,8 @@
-# 数据沿袭基本指南(2022年)
+# 数据沿袭基本指南(2022 年)
 
+> 原文链接：<a target="_blank" href="/posts/2022/The_Essential_Guide_to_Data_Lineage_in_2022.pdf">The Essential Guide to DATA LINEAGE IN 2022</a>
 
-> 原文：<a target="_blank" href="/posts/2022/The_Essential_Guide_to_Data_Lineage_in_2022.pdf">The Essential Guide to DATA LINEAGE IN 2022</a>
-
-翻译时间：2022年02月26日
+> 翻译日期：2022 年 02 月 26 日
 
 ## 什么是数据沿袭?
 
@@ -42,6 +41,7 @@
 > Data Lineage and Business Processes
 
 目前为止，本文已经解释了数据沿袭概念以及如何水平沿袭和垂直沿袭，并且这些数据行为一直都在系统与数据对象环境中时时刻刻地发生着。另外，数据沿袭还有一个经常被忽视但极其重要的因素，那就是数据沿袭能够解读并体现一个组织中的绝大多数业务流程。
+
 > So far we have described data lineage and how it can be horizontal and vertical, but this has been done in the context of systems and data objects. But there is another frequently overlooked, but extremely important, aspect of data lineage. Data lineage represents a good deal of the business processes that occur in an organization.
 
 互联网时代之前，组织中的所有业务流程都是人工维护的，将数据信息从一个人（或部门）传递到另一个人。如今，流程处理方式全部革新了。我们可以 认为，IT 系统已经取代了人工进行业务处理，数据沿袭作为新的处理方式在人员或部门之间传送信息。组织应该自我复盘进行确认，通过数据沿袭挖掘业务价值链就是完善业务流程的最有效或最高效的处理方式。伴随着 IT 体系框架的持续增长和端对端时序数据的长期累积，不断地增加了实现梳理业务价值链的难度。这些因素与企业的整体业务模型息息相关，这就是为了什么数据沿袭将成为企业战略级的关注方向。
@@ -52,7 +52,7 @@
 
 > Truth be told, most organizations are still a long way off from using data lineage in business strategy. Nevertheless, the more technical use cases for data lineage are still extremely valuable, and we will look at a range of them now to gain a better appreciation of what data lineage is and the value it provides.
 
-### 用例1：数据报告完整性的保证
+### 用例 1：数据报告完整性的保证
 
 > Use Case 1 Assurance of Data Integrity in Reports
 
@@ -72,7 +72,7 @@
 
 > Our first couple of use cases have focused on more technical aspects. However, data lineage has a wider application, as we will now see.
 
-### 用例2：影响分析
+### 用例 2：影响分析
 
 > Use Case 2 Impact Analysis
 
@@ -84,7 +84,7 @@
 
 > Data lineage is a huge advantage in impact analysis. The data objects downstream of where the change will be implemented are identified, along with the business users who interact with them. This is important because not every impact is a technical system or data impact, and business process changes may be required.
 
-### 用例3：追踪个人信息(PI)
+### 用例 3：追踪个人信息(PI)
 
 > Use Case 3 Tracking Personal Information (PI)
 
@@ -104,7 +104,7 @@
 
 > Using a data lineage tool to bring a data environment under control from the perspective of PI is a concern of Data Governance and any Legal or Privacy function in an organization. This demonstrates how valuable data lineage can be outside of IT.
 
-### 用例4：被中断的 ETL
+### 用例 4：被中断的 ETL
 
 > Use Case 4 Broken ETL
 
@@ -124,7 +124,7 @@ ETL 作业在生产环境执行时可能会发生中断，这通常是由于上�
 
 > Most importantly, data lineage can pinpoint what is broken. This means that the root cause of the problem can be detected and analyzed. All too often, this is not done, and downstream workarounds are implemented that further distort the overall architecture. The role of data lineage in root cause analysis and error correction cannot be overstated.
 
-### 用例5：应用程序和报告迁移
+### 用例 5：应用程序和报告迁移
 
 > Use Case 5 Migration of Applications and Reports
 
@@ -148,23 +148,25 @@ ETL 作业在生产环境执行时可能会发生中断，这通常是由于上�
 
 > That said, there are some additional quick wins that can be gained from data lineage during a migration. In particular, identifying data and report objects where data “dead-ends” and which are not used is extremely helpful. There is no point in migrating something that is not used. Thus, these “dead-end” objects and the data lineage pathways to them can be discarded in the migration.
 
-### 用例6：数据报告完整性的保证
+### 用例 6：数据报告完整性的保证
 
 > Use Case 6 Assurance of Data Integrity in Reports
 
-数据管理在20世纪90年代非常流行，但在21世纪初期衰退得基本消失了，它更是没有成为2005年数据治理革命的重要组成部分，大概原因是由于数据管理高度依赖手工操作。然而，数据沿袭现在为这类问题提供了新的解决方案，数据沿袭可以解决数据管理问题的例子包括:
+数据管理在 20 世纪 90 年代非常流行，但在 21 世纪初期衰退得基本消失了，它更是没有成为 2005 年数据治理革命的重要组成部分，大概原因是由于数据管理高度依赖手工操作。然而，数据沿袭现在为这类问题提供了新的解决方案，数据沿袭可以解决数据管理问题的例子包括:
+
 - 持续监控报表中未使用到的数据表和 ETL 流程。这不仅是上文提到的数据迁移用例，也是数据管理的持续活动。
 - 发现并纠正在数据迁移过程中的不兼容性问题。比如目标列比源列少、数据可能被截断、目标列数据类型不一致，或删除仅包含数字的字符串类型列中的无意义前缀数字”零“。
 - 自动发现可疑的数据提取，如“私人”文件可能会用于不合规地数据处理，甚至可能是欺诈。
 
 > In the 1990’s Data Administration became very popular, only to largely disappear in the recessions of the early 2000’s. It never became a serious component of the Data Governance revolution that began in 2005, probably because of the intensely manual aspect of Data Administration. Yet, data lineage now offers a solution to this problem. Examples of the concerns of Data Administration that data lineage can address include:
+>
 > - Continuously monitoring for tables and ETL processes that are not used in reporting, and go nowhere. This is not just within the context of the migration projects we mentioned earlier but is a continuous activity of Data Administration.
-> - Discovering and remediating datatype discrepancies that corrupt data as it flows. A target column may be shorter than a source column, and truncate data. Or a target column may be numeric and remove meaningful leading zeroes from a source column that is character data, but contains only numbers. 
+> - Discovering and remediating datatype discrepancies that corrupt data as it flows. A target column may be shorter than a source column, and truncate data. Or a target column may be numeric and remove meaningful leading zeroes from a source column that is character data, but contains only numbers.
 > - Discovering suspicious data extracts, such as “private” files that might be used for ungoverned data processing, or may even possibly be fraudulent.
 
 除了上述例子之外，实际上在数据管理中还存在各种各样的用例。如果不使用数据治袭，很难在整个企业数据生态系统的层面上实质性解决这些问题。
 
-> There are actually a wide range of use cases that exist within Data Administration in addition to these examples. Without data lineage it is difficult to see how these could be meaningfully addressed at the scale of an entire enterprise data ecosystem. 
+> There are actually a wide range of use cases that exist within Data Administration in addition to these examples. Without data lineage it is difficult to see how these could be meaningfully addressed at the scale of an entire enterprise data ecosystem.
 
 ## 数据沿袭自动化扮演的角色
 
@@ -202,7 +204,7 @@ ETL 作业在生产环境执行时可能会发生中断，这通常是由于上�
 
 数据沿袭自动发现工具招牌速度非常高效。它们可以扫描大规模的 IT 环境，并在几分钟内生成数据沿袭图谱。同样的工作，手工操作的话可能需要几天甚至几个月的时间才能完成。正如我们所看到的，在一些用例场景中，需要立即应答数据沿袭相关的问题。
 
-IT 经理和执行发起人有时会错误地采用这样一种观点，即数据沿袭的需求是非常断断续续的——就像迁移项目一样——那么他们为什么要投资一个按年度许可证收取费用的数据沿袭自动化工具呢？他们认为在项目需要时再聘请数据顾问手工记录数据沿袭——即单次的数据服务成本。上述讨论的用例场景表明，这是一种非常短视的观点，企业应该为核心的用例场景和需要快速解决数据问题的用例场景采购一套数据沿袭自动化工具，这才是 2022年及以后大多数企业面临的决策问题。
+IT 经理和执行发起人有时会错误地采用这样一种观点，即数据沿袭的需求是非常断断续续的——就像迁移项目一样——那么他们为什么要投资一个按年度许可证收取费用的数据沿袭自动化工具呢？他们认为在项目需要时再聘请数据顾问手工记录数据沿袭——即单次的数据服务成本。上述讨论的用例场景表明，这是一种非常短视的观点，企业应该为核心的用例场景和需要快速解决数据问题的用例场景采购一套数据沿袭自动化工具，这才是 2022 年及以后大多数企业面临的决策问题。
 
 > IT managers and executive sponsors sometimes make the mistake of adopting a viewpoint that the need for data lineage is very intermittent – like migrations projects - so why should they invest in an automated data lineage tool that will eat up recurrent annual license fees? Sometimes they think it is better to hire consultants to document the data lineage manually when it is needed – a one-time cost. The use cases discussed earlier show that this is a short-sighted view and an automated data lineage tool needs to be on hand for the use cases that are permanent in nature, and others where a rapid response is needed. That really is the situation for most enterprises as they face 2022 and beyond.
 
@@ -211,14 +213,16 @@ IT 经理和执行发起人有时会错误地采用这样一种观点，即数�
 > Conclusion
 
 本文中，我们详细描述了数据沿袭概念并列举了几个核心用例场景。我们从 IT 角度和数据治理角度看到数据沿袭发挥的作用。事实上，数据沿袭的重要性和价值远远超出了我们上述描述的数据质量场景（例如源目标协调）、主数据管理场景（例如流入集成流程）和数据治理的其他方面(例如选择最好的数据来源)。我们也看到了采用数据沿袭会遇到的障碍，比如:
+
 - 数据沿袭自动发现概念依赖的业务需求并不常见
 - IT 业界过往对数据沿袭的偏见，认为它是不切实际的，也从未讨论过如何落地
 - 缺乏对数据沿袭用例场景的理解，复杂问题简单化处理了（为了填坑又挖了另一个坑）
-> In this eBook we have described data lineage in detail with illustrations from several core use cases. We have seen how useful it can be from an IT perspective and a Data Governance perspective. In fact, the importance and value of data lineage goes well beyond what we have described as it is needed to successfully address Data Quality (e.g. source-target reconciliation), Master Data Management (e.g. flows into integration processes), and other aspects of Data Governance (e.g. selecting the best source of data). We have also seen barriers to adoption, including:
-> - The perception that automated data lineage is needed on an infrequent basis
-> - Inertia in IT based on data lineage being impractical in the past, and so never discussed
-> - A lack of understanding of the use cases due to the problems they solve simply being ignored
+  > In this eBook we have described data lineage in detail with illustrations from several core use cases. We have seen how useful it can be from an IT perspective and a Data Governance perspective. In fact, the importance and value of data lineage goes well beyond what we have described as it is needed to successfully address Data Quality (e.g. source-target reconciliation), Master Data Management (e.g. flows into integration processes), and other aspects of Data Governance (e.g. selecting the best source of data). We have also seen barriers to adoption, including:
+  >
+  > - The perception that automated data lineage is needed on an infrequent basis
+  > - Inertia in IT based on data lineage being impractical in the past, and so never discussed
+  > - A lack of understanding of the use cases due to the problems they solve simply being ignored
 
-然而，我们很清楚地明白数据沿袭自动化的价值。回到我们的炼油厂的用例场景，没有设备任何炼油厂都无法运行，更无法了解在某一时刻它的运行数据。如果我们不了解炼油厂运行的数据沿袭地图，我们凭什么期望一个复杂的数据环境能够有效地运作，从业务策略、操作效率和风险缓解的角度来看，这张数据沿袭地图是十分必要的，而且它正是数据沿袭自动化工具所提供的。也许在我们列出的所有用例中，最具有战略意义的是第一个项目迁移的用例，通过重新设计业务流程来匹配业务目标。战术上最有用的可能是最后一个用例，它能够快速诊断是什么影响了 ETL 作业的运行。归根结底，我们列举这么多的用例场景组合是为了给企业采购数据沿袭自动化工具提供一个充足的理由。事实本是如此，我们期待这些数据沿袭工具在 2022年被广泛采用。
+然而，我们很清楚地明白数据沿袭自动化的价值。回到我们的炼油厂的用例场景，没有设备任何炼油厂都无法运行，更无法了解在某一时刻它的运行数据。如果我们不了解炼油厂运行的数据沿袭地图，我们凭什么期望一个复杂的数据环境能够有效地运作，从业务策略、操作效率和风险缓解的角度来看，这张数据沿袭地图是十分必要的，而且它正是数据沿袭自动化工具所提供的。也许在我们列出的所有用例中，最具有战略意义的是第一个项目迁移的用例，通过重新设计业务流程来匹配业务目标。战术上最有用的可能是最后一个用例，它能够快速诊断是什么影响了 ETL 作业的运行。归根结底，我们列举这么多的用例场景组合是为了给企业采购数据沿袭自动化工具提供一个充足的理由。事实本是如此，我们期待这些数据沿袭工具在 2022 年被广泛采用。
 
 > Yet we have also clearly demonstrated the value of automated data lineage. Going back to our oil refinery metaphor, no refinery could operate without the instrumentation to understand what is happening in it at any time. Why should we expect a complex data environment to function efficiently and without risk if we do not even have a map of how it is laid out? From a perspective of business strategy, operational efficiency, and risk mitigation this map is needed and it is precisely what an automated data lineage tool provides. Perhaps of all the use cases, we have laid out, the most strategic is the first one wherein migrations the opportunity exists to reengineer business processes to match business objectives. The most tactically useful is perhaps the last one, with the ability to quickly diagnose what broke an ETL process. Yet the combination of all of the use cases we have described provides an overwhelming justification for the acquisition of an automated data lineage tool. So overwhelming in fact that we can expect widespread adoption of these tools in 2022.
