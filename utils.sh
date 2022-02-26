@@ -15,16 +15,19 @@ build)
         sed -i '' 's+Published with GitBook+晚知胜于无知+g' "${filepath}"
     done
     rm _book/utils.sh
-    mv _book Online-Bolg
+    mv _book Online-Blog
 
     prettier --write Online-Blog/index.html
-    prettier --write Online-Blog/posts/*.html
+    prettier --write Online-Blog/posts/*/*.html
     ;;
 serve)
-    # pm2 serve --port 4000 --no-daemon Online-Blog
-    python3 -m http.server --directory Online-Blog 4000
+    # pm2 serve --port 4000 --no-daemon .
+    python3 -m http.server --directory . 4000
     ;;
-
+deploy)
+    rm -fr {posts,gitbook}
+    cp -rf Online-Blog/* .
+    ;;
 *)
     echo "./utils.sh install"
     echo "./utils.sh build"
