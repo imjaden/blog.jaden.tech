@@ -30,6 +30,8 @@ build:automated)
 
     mv posts posts.deprecated
     cp -rf Online-Blog/* .
+
+    python3 -m http.server --directory . 4000
     ;;
 
 serve)
