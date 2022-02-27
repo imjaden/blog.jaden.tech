@@ -1,3 +1,4 @@
 .DS_Store
-_book
-Online-Blog
+_book/
+Online-Blog/
+posts.deprecated/

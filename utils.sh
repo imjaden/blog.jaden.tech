@@ -25,7 +25,7 @@ serve)
     python3 -m http.server --directory . 4000
     ;;
 deploy)
-    rm -fr {posts,gitbook}
+    mv posts posts.deprecated
     cp -rf Online-Blog/* .
     ;;
 *)
