@@ -29,7 +29,7 @@ build:automated)
     git checkout posts
 
     mv posts posts.deprecated
-    cp -rf Online-eBook/* .
+    cp -rf Online-Blog/* .
     ;;
 
 serve)
